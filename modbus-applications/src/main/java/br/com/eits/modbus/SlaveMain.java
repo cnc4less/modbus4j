@@ -40,9 +40,9 @@ public class SlaveMain
 
         while (true) {
         	final BasicProcessImage po = (BasicProcessImage) slave.getProcessImage(1);
-        	po.setNumeric(RegisterRange.HOLDING_REGISTER, 1, DataType.FOUR_BYTE_FLOAT_SWAPPED, new Random().nextFloat());
-        	po.setNumeric(RegisterRange.HOLDING_REGISTER, 2, DataType.FOUR_BYTE_FLOAT_SWAPPED, new Random().nextFloat());
-        	po.setNumeric(RegisterRange.HOLDING_REGISTER, 3, DataType.TWO_BYTE_INT_SIGNED, new Random().nextInt(999));
+        	po.setNumeric(RegisterRange.HOLDING_REGISTER, 1, DataType.FOUR_BYTE_FLOAT, new Random().nextInt(200));
+        	po.setNumeric(RegisterRange.HOLDING_REGISTER, 2, DataType.FOUR_BYTE_FLOAT_SWAPPED, new Random().nextInt(200));
+        	po.setNumeric(RegisterRange.HOLDING_REGISTER, 3, DataType.TWO_BYTE_INT_SIGNED, new Random().nextInt(200));
         	po.setCoil(4, true);
         	
             synchronized (slave) {
